@@ -13,6 +13,11 @@
     <!-- Added a link to our external stylesheet-->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
+    <style>
+        body {
+            background-image: url('assets/images/circuit.png');
+        }
+    </style>
 </head>
 <body>
   <header id=CrystalCollector>
@@ -32,22 +37,23 @@
   </header>
 
   <header id=ScoreBox>
+    <p id=snarkyMsg></p>
     <p id=wins>Wins: 0</p>
     <p id=losses>Losses: 0</p>
   </header>
 
   <div class=imagesDiv>
       <div class=imageDiv>
-        <img src="assets/images/icons8-ruby-96.png" alt="Ruby" width="100px" height="100px" class="imageClass">
+        <img src="assets/images/icons8-ruby-96.png" alt="Ruby" width="100px" height="100px" class="imageClass unit-4-game-button bRuby">
       </div>
       <div class=imageDiv>
-        <img src="assets/images/icons8-sapphire-96.png" alt="Sapphire" width="100px" height="100px" class="imageClass">
+        <img src="assets/images/icons8-sapphire-96.png" alt="Sapphire" width="100px" height="100px" class="imageClass unit-4-game-button bSapphire">
       </div>
       <div class=imageDiv>
-        <img src="assets/images/icons8-crystal-96.png"  alt="Ruby" width="100px" height="100px" class="imageClass">
+        <img src="assets/images/icons8-crystal-96.png"  alt="Crystal" width="100px" height="100px" class="imageClass unit-4-game-button bCrystal">
       </div>
       <div class=imageDiv>
-        <img src="assets/images/icons8-jewel-96.png" alt="Jewel" width="100px" height="100px" class="imageClass">
+        <img src="assets/images/icons8-jewel-96.png" alt="Jewel" width="100px" height="100px" class="imageClass unit-4-game-button bJewel">
       </div>
   </div>
 
@@ -59,15 +65,7 @@
         45
   </header>
   
-
-<script type="text/javascript">
-
-$(document).ready(function() {
-
-// Your code here...
-});
-
-</script>
+  <script type="text/javascript" src="assets/javascript/game.js"></script>
 
 </body>
 </html>
