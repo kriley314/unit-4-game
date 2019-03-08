@@ -5,7 +5,6 @@
     <title>CrystalsCollector</title>
 
     <!-- Added link to the jQuery Library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <!-- Added a link to Bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -24,47 +23,48 @@
     CrystalsCollector!
   </header>
 
-  <header id=CrystalInstructions>
+  <div id=CrystalInstructions>
     <p class=indentText>You will be given a random number at the start of the game</p>
     <p class=indentText>There are four crystals below.  By clicking on a crystal you will add a specfic amount of points to your total score.</p>
     <p class=indentText>You win the game by matching your total score to random number, you lose the game if your total score goes above hte random number.</p>
     <p class=indentText>The value of each crystal is hidden from you until you click on it.</p>
     <p class=indentText>Each time when the game starts, the game will change the values of each crystal.</p>
-  </header>
+  </div>
 
-  <header id=TargetBox>
+  <div id=TargetBox>
     34
-  </header>
+  </div>
 
   <header id=ScoreBox>
-    <p id=snarkyMsg></p>
-    <p id=wins>Wins: 0</p>
-    <p id=losses>Losses: 0</p>
+    <div id=snarkyMsg>Careful..</div>
+    <div id=wins>Wins: 0</div>
+    <div id=losses>Losses: 0</div>
   </header>
 
   <div class=imagesDiv>
       <div class=imageDiv>
-        <img src="assets/images/icons8-ruby-96.png" alt="Ruby" width="100px" height="100px" class="imageClass unit-4-game-button bRuby">
+        <img src="assets/images/icons8-ruby-96.png" alt="Ruby" width="100px" height="100px" class="imageClass bRuby">
       </div>
       <div class=imageDiv>
-        <img src="assets/images/icons8-sapphire-96.png" alt="Sapphire" width="100px" height="100px" class="imageClass unit-4-game-button bSapphire">
+        <img src="assets/images/icons8-sapphire-96.png" alt="Sapphire" width="100px" height="100px" class="imageClass bSapphire">
       </div>
       <div class=imageDiv>
-        <img src="assets/images/icons8-crystal-96.png"  alt="Crystal" width="100px" height="100px" class="imageClass unit-4-game-button bCrystal">
+        <img src="assets/images/icons8-crystal-96.png"  alt="Crystal" width="100px" height="100px" class="imageClass bCrystal">
       </div>
       <div class=imageDiv>
-        <img src="assets/images/icons8-jewel-96.png" alt="Jewel" width="100px" height="100px" class="imageClass unit-4-game-button bJewel">
+        <img src="assets/images/icons8-jewel-96.png" alt="Jewel" width="100px" height="100px" class="imageClass bJewel">
       </div>
   </div>
 
-  <header id=yourScoreIs>
+  <div id=yourScoreIs>
       Your total score is:
-  </header>
+  </div>
 
-  <header id=yourScore>
+  <div id=yourScore>
         45
-  </header>
-  
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="assets/javascript/game.js"></script>
 
 </body>

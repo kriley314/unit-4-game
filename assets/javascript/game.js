@@ -20,22 +20,45 @@ var nNumberOfLosses = 0;
 
 function ResetForNewGame() {
   // Initialize everything for a new game..
-
-  // Setup the Target value - Range 19-120..  So..  Let's generate a random number from 0-111 (inclusive)
-  // and add 19..
-  nTargetValue = ( Math.floor( Math.random()) * 112 ) + 19;
+//debugger;
+  // Setup the Target value - Range 19-120..  So..  Let's generate a random number from 0-101 (inclusive
+  // so multiply by 102) and add 19..
+  nTargetValue = ( Math.floor( Math.random() * 102 )) + 19;
 
   // Start the working total at 0..
   nWorkingTotal = 0;
 
-  // Generate values for our crystals - 1-12..  As one would guess, 0-11 and add 1..
-  nRubyValue = ( Math.floor( Math.random()) * 12 ) + 1;
-  nSapphireValue = ( Math.floor( Math.random()) * 12 ) + 1;
-  nCrystalValue = ( Math.floor( Math.random()) * 12 ) + 1;
-  nJewelValue = ( Math.floor( Math.random()) * 12 ) + 1;
+  // Generate values for our crystals - 1-12..  As one would guess, 0-11 and add 1.
+  // I am going to add one bit..  I am going to make sure no 2 "precious stone" values
+  // match..
+  nRubyValue = ( Math.floor( Math.random() * 12 )) + 1;
+
+  while ( true ) {
+    nSapphireValue = ( Math.floor( Math.random() * 12 )) + 1;
+    if ( nSapphireValue != nRubyValue ) {
+      break;
+    }
+  }
+
+  while ( true ) {
+    nCrystalValue = ( Math.floor( Math.random() * 12 )) + 1;
+    if (( nCrystalValue != nRubyValue     ) &&
+        ( nCrystalValue != nSapphireValue )) {
+      break;
+    }
+  }
+
+  while ( true ) {
+    nJewelValue = ( Math.floor( Math.random() * 12 )) + 1;
+    if (( nJewelValue != nRubyValue     ) &&
+        ( nJewelValue != nSapphireValue ) &&
+        ( nJewelValue != nCrystalValue  )) {
+      break;
+    }
+  }
 
   // Make sure the screen values are updated to reset..
-  $("#yourSCore").text( nWorkingTotal );
+  $("#yourScore").text( nWorkingTotal );
   $("#TargetBox").text( nTargetValue );
 
   // Start out letting console know where eveyrthing stands..
@@ -57,7 +80,7 @@ $(".bSapphire").on("click", function() {
   
 $(".bCrystal").on("click", function() {
   // Call the function that handles everything with the Ruby dec amount..
-  PlayGame( nCrystal );
+  PlayGame( nCrystalValue );
 });
   
 $(".bJewel").on("click", function() {
@@ -75,13 +98,16 @@ $(".bJewel").on("click", function() {
 //      message saying you lost..  Increment the losses total..  And.. Call the
 //      ResetForNewGame function.
 function PlayGame( nIncValue ) {
-  // Start by incrementing the working total by the amount passed in..
+  // If we are starting out..  Tell the user to be careful..
+  $("#snarkyMsg").text( "Careful.." );
+
+  // Next, increment the working total by the amount passed in..
   nWorkingTotal += nIncValue;
 
   // Start checking things..
   if ( nWorkingTotal < nTargetValue ) {
     // We need to update the nWorkingTotal on the screen..
-    $("#yourSCore").text( nWorkingTotal );
+    $("#yourScore").text( nWorkingTotal );
     return;
   }
 
@@ -91,17 +117,19 @@ function PlayGame( nIncValue ) {
   // Did we win?
   if ( nWorkingTotal === nTargetValue ) {
     // We WON!!  Increment the number of wins and output it to the screen.
-    $("wins").text = "Wins: " + ++nNumberOfWins;
+    $("#wins").text( "Wins: " + ++nNumberOfWins );
 
     // Output the We Won message..
-    $("snarkyMsg").text = "Winner!";
+    $("#snarkyMsg").text( "Winner!" );
   } else {
     // We lost..  :(  Increment the loss total and output it.
-    $("losses").text = "Losses: " + ++nNumberOfLosses;
+    $("#losses").text( "Losses: " + ++nNumberOfLosses );
 
     // Output the you lost message..
-    $("snarkyMsg").text = "Lost..";
+    $("#snarkyMsg").text( "Lost.. Sigh.." );
   }
+
+  ResetForNewGame();
 }
 
 });
