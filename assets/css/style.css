@@ -1,0 +1,107 @@
+.body {
+    background-image: url('../images/circuit.png');
+}
+
+#CrystalCollector {
+      font-size: 24px;
+      color: white;
+      background-color: rgb(207, 102, 15);
+      width: 30%;
+      padding-bottom: 20px;
+      padding-top: 20px;  
+      text-align: center;
+      margin-left: 10px;
+      margin-top: 10px;
+}
+
+#CrystalInstructions {
+    font-size: 16px;
+    color:green;
+    background-color: blanchedalmond;
+    width: 60%;
+    padding-bottom: 20px;
+    padding-top: 20px;  
+    text-align: left;
+    margin-left: 10px;
+    margin-top: 10px;
+
+}
+
+.indentText {
+    margin-left: 10px;
+}
+
+#TargetBox {
+    font-size: 20px;
+    font-style: bold;
+    color: magenta;
+    background-color: lightgreen;
+    width: 180px;  
+    height: 90px;
+/*    width: 20%;
+    height: 15%;  */
+    text-align: left;
+    float: left;
+    margin-left: 10px;
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+#ScoreBox {
+    font-size: 16px;
+    font-style: bold;
+    color: rgb(255, 0, 76);
+    background-color: lightskyblue;
+/*    width: 90px;
+    height: 100px; */
+    width: 10%;
+    height: 9%;
+    text-align: left;
+    float: left;
+    margin-left: 10px;
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.imagesDiv {
+    clear: both;
+}
+
+.imageDiv {
+    background-color: blanchedalmond;
+    float: left;
+    margin: 10px;
+}
+
+#yourScoreIs {
+    font-size: 12px;
+    font-style: bold;
+    color:white;
+    background-color: rgb(0, 55, 100);
+    width: 118px;
+    height: 10%;
+    text-align: left;
+    float: none;
+    margin-left: 10px;
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+#yourScore {
+    font-size: 12px;
+    font-style: bold;
+    color:white;
+    background-color: rgb(0, 55, 100);
+    width: 118px;
+    height: 10%;
+    text-align: left;
+    float: none;
+    margin-left: 10px;
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}

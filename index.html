@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CrystalsCollector</title>
+
+    <!-- Added link to the jQuery Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Added a link to Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <!-- Added a link to our external stylesheet-->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+<body>
+  <header id=CrystalCollector>
+    CrystalsCollector!
+  </header>
+
+  <header id=CrystalInstructions>
+    <p class=indentText>You will be given a random number at the start of the game</p>
+    <p class=indentText>There are four crystals below.  By clicking on a crystal you will add a specfic amount of points to your total score.</p>
+    <p class=indentText>You win the game by matching your total score to random number, you lose the game if your total score goes above hte random number.</p>
+    <p class=indentText>The value of each crystal is hidden from you until you click on it.</p>
+    <p class=indentText>Each time when the game starts, the game will change the values of each crystal.</p>
+  </header>
+
+  <header id=TargetBox>
+    34
+  </header>
+
+  <header id=ScoreBox>
+    <p id=wins>Wins: 0</p>
+    <p id=losses>Losses: 0</p>
+  </header>
+
+  <div class=imagesDiv>
+      <div class=imageDiv>
+        <img src="assets/images/icons8-ruby-96.png" alt="Ruby" width="100px" height="100px" class="imageClass">
+      </div>
+      <div class=imageDiv>
+        <img src="assets/images/icons8-sapphire-96.png" alt="Sapphire" width="100px" height="100px" class="imageClass">
+      </div>
+      <div class=imageDiv>
+        <img src="assets/images/icons8-crystal-96.png"  alt="Ruby" width="100px" height="100px" class="imageClass">
+      </div>
+      <div class=imageDiv>
+        <img src="assets/images/icons8-jewel-96.png" alt="Jewel" width="100px" height="100px" class="imageClass">
+      </div>
+  </div>
+
+  <header id=yourScoreIs>
+      Your total score is:
+  </header>
+
+  <header id=yourScore>
+        45
+  </header>
+  
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+
+// Your code here...
+});
+
+</script>
+
+</body>
+</html>
