@@ -59,7 +59,7 @@ function ResetForNewGame() {
 
   // Make sure the screen values are updated to reset..
   $("#yourScore").text( nWorkingTotal );
-  $("#TargetBox").text( nTargetValue );
+  $("#TargetBox").text( "Random Number: " + nTargetValue );
 
   // Start out letting console know where eveyrthing stands..
   console.log( "Initial Conditions: Target: " + nTargetValue );

@@ -29,7 +29,7 @@
 #TargetBox {
     font-size: 20px;
     font-style: bold;
-    color: magenta;
+    color: rgb(255, 0, 157);
     background-color: lightgreen;
     width: 20%;
     height: 30%;
@@ -68,6 +68,11 @@
     background-color: blanchedalmond;
     float: left;
     margin: 10px;
+}
+
+.imageDiv:hover {
+    background-color: aqua;
+    transition: 0.7s
 }
 
 #yourScoreIs {
